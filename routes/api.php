@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\EmailController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/verify_email', [EmailController::class, 'verify']);
+Route::post('/verify_email', [EmailController::class, 'verify_email']);
+
+Route::post('/verify_password', [EmailController::class, 'verify_password']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
